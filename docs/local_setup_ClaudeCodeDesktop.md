@@ -11,18 +11,18 @@ This doc covers only what's specific to Claude Code Desktop. The setup and run c
 
 3. Ask Claude to set up the project. It follows the README's Quick start: it creates `.venv`, installs the dev dependencies and runs the tests. If your `python3` is older than 3.10, it uses a newer Python instead.
 
+## Browsing the code
+
+1. Use the **Files pane** beside the chat: click a file link in Claude's messages, browse the file tree, or ask Claude to open a file (for example "open models.py").
+
+   ![Claude Code Desktop with the chat on the left, the session details panel, models.py open in the Files pane, and the repo's file tree on the right](local_setup_images/claude_code_desktop_files_pane.webp)
+
 ## Running checks in the Terminal pane
 
 1. Ask Claude to run the checks, for example "run and display the pytest and ruff checks". It runs them in a tab in the **Terminal pane** so you can watch the output.
 2. The tabs stay open with `.venv` active, so you can type more commands there yourself.
 
    ![Claude Code Desktop with ruff and pytest run in the Terminal pane, showing All checks passed and 6 passed, beside these notes open in the Files pane](local_setup_images/claude_code_desktop_checks_terminal.webp)
-
-## Browsing the code
-
-1. Use the **Files pane** beside the chat: click a file link in Claude's messages, browse the file tree, or ask Claude to open a file (for example "open models.py").
-
-   ![Claude Code Desktop with the chat on the left, the session details panel, models.py open in the Files pane, and the repo's file tree on the right](local_setup_images/claude_code_desktop_files_pane.webp)
 
 ## Creating a PR
 
