@@ -45,6 +45,20 @@
    - `tests/` has one test file per agent, plus the pipeline.
    - `docs/design.md` explains the design.
 
+## Creating a PR
+
+1. In Claude Code Desktop, click **Create PR**. Claude creates a branch (for example `docs/local-setup-notes`), commits the changes and pushes the branch to my fork.
+2. The push asks to sign in. GitHub doesn't accept passwords over HTTPS, so use a fine-grained personal access token:
+   - github.com → Settings → Developer settings → Personal access tokens → Fine-grained tokens
+   - Repository access: Only select repositories → `akankshalonhari/interview-prep-agents`.
+   - Permissions → Repositories → Contents: Read and write
+   - Push finished in the terminal, using the username and the password is the token.
+3. Once the push finishes, open `https://github.com/akankshalonhari/interview-prep-agents/compare/main...<branch>`.
+   - Check that the base repository is my fork, not `GoNextPath`.
+   - Fill in the PR template, then click **Create pull request**. The PR is then ready for review, not a draft.
+
+   ![Claude Code Desktop with the finished push in the Terminal pane and GitHub's Comparing changes page for main...docs/local-setup-notes in the Browser pane, showing Able to merge](local_setup_images/claude_code_desktop_create_pr.png)
+
 ## Local setup Mac Terminal (Manual)
 
 1. Install Homebrew: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
