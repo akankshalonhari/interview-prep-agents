@@ -14,14 +14,11 @@
 
 **In one line:** a candidate gets an interview question, types an answer, and gets a score plus specific feedback. Questions they struggle with come back for more practice.
 
-> Items marked *(proposed)* aren't decided in the repo yet. They're suggestions for the teams to confirm.
-
 ## 2. Problem Statement / Context
 
-- Practising for interviews alone is hard. You can find questions, but not someone to judge your answer and tell you what to fix.
-- Generic feedback ("be more specific") doesn't help. Candidates need feedback tied to what a strong answer should cover.
-- Practice is rarely targeted. People keep answering questions they're already good at instead of their weak spots.
-- The study group also wants a real, shared project to learn multi-agent LLM systems on, built through the same fork-and-PR flow used in industry.
+Solo interview practice is broken: candidates can find questions but lack actionable, targeted feedback on their weak spots. Vague advice like "be more specific" doesn't work; developers need precise critiques aligned with what strong answers actually require.
+
+To solve this, our study group is building an automated mock interview platform. This shared, production-grade project allows us to master multi-agent LLM systems while using the standard industry fork-and-PR workflow.
 
 **Where it stands today:** an early scaffold. All four agents are stubs that return placeholder output, so the pipeline runs end to end (`python -m interview_prep`), and lint and tests pass. Teams now replace the stubs with real implementations.
 
@@ -47,7 +44,7 @@
 
 ## 5. User Stories & Requirements
 
-Prioritised with **MoSCoW**: **M**ust, **S**hould, **C**ould, **W**on't (for now).
+Prioritised with MoSCoW matrix for PRD (A MoSCoW table in a Product Requirements Document (PRD) is a structured matrix used to prioritize feature requirements, manage scope, and align stakeholders). **M**ust, **S**hould, **C**ould, **W**on't (for now).
 
 ### Question Generator
 
@@ -122,7 +119,7 @@ flowchart LR
     AE -- Evaluation --> FA[Feedback Agent]
     FA -- Feedback --> C
     FA -- Outcome --> MA[Metrics Agent]
-    MA -. weak questions<br/>score below 0.5 .-> QG
+    MA -.->|"weak questions<br/>score below 0.5"| QG
 ```
 
 ### 7.2 One practice round, step by step
