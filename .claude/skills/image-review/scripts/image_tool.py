@@ -1,8 +1,8 @@
-"""Find, pixelate and crop parts of a screenshot before it goes into the public repo.
+"""Find, pixelate and crop parts of an image before it goes into the public repo.
 
 Needs Pillow, which isn't a project dependency. Run it with uv so nothing is installed:
 
-    uv run --with pillow python .claude/skills/screenshot-review/scripts/screenshot_tool.py <command> ...
+    uv run --with pillow python .claude/skills/image-review/scripts/image_tool.py <command> ...
 
 Commands:
 

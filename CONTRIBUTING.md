@@ -54,6 +54,7 @@ Worth doing before each new branch so you are not building against stale code.
 - **Treat model output and user answers as untrusted.** See [SECURITY.md](SECURITY.md).
 - **Keep docs readable.** If your change affects how someone runs or uses the project, update the README.
 - **Watch costs.** Use small or cheap models while developing, and mock LLM calls in tests.
+- **Check images before you commit them.** Screenshots can show your name, username, computer name or home folder. To scan and fix images before you commit them, use [the image-review skill](.claude/skills/image-review/SKILL.md).
 
 ## AI-assisted contributions
 
